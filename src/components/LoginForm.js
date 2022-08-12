@@ -15,7 +15,7 @@ function LoginForm({ Login, error }) {
     <form onSubmit={submitHandler}>
       <div className="form-inner">
         <h2>LOGIN</h2>
-        {/*Error*/}
+        {error != "" ? <div>{error}</div> : ""}
 
         {/* 이름 */}
         <div className="form-group">

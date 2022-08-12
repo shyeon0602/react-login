@@ -11,3 +11,104 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, button{
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F3F3F3;
+}
+
+form {
+  display: block;
+  position: relative;
+}
+
+/*아웃라인 만들기 위한 박스 형성*/
+/* form::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: 1;
+  background-image: linear-gradient(to bottom right, #ffce00, #fe4880);
+}
+form .form-inner{
+  position: relative;
+  display: block;
+  background-color: #F3F3F3;
+  padding: 30px;
+  z-index: 2;
+} */
+
+form .form-inner h2{
+  color: #f5cb4e;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+form .form-inner .form-group {
+  display: flex;
+  width: 300px;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.form-inner .form-group label {
+  display: block;
+  color: black;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-right: 10px;
+  transition: 0.4s; /*마우스를 가져갔을 때 전환 발생*/
+}
+
+/*라벨(ex. name, id, password) 색상, 굵기 변환*/
+.form-inner .form-group:focus-within label {
+  font-weight: 700;
+}
+
+form .form-inner .form-group input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #F9E8B7;
+  border-radius: 8px;
+  transition: 0.4s; /*마우스를 가져갔을 때 전환 발생*/
+}
+
+/*transition을 통해 설정한 애니메이션을 적용할 수 있음*/
+form .form-inner .form-group:focus-within input{
+  box-sizing: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+form .form-inner input[type="submit"] {
+  display: inline-flex;
+  margin-left: 110px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: #F8E2A5;
+  background-size: 200%;
+  background-position: 0%;
+  font-weight: 600;
+  cursor: pointer;
+}

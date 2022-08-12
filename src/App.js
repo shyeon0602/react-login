@@ -15,10 +15,28 @@ function App() {
   //로그인 방법 확인
   const Login = (details) => {
     console.log(details);
+    //programUser의 정보와 일치할 때 로그인 됨
+    if (
+      details.email == programUser.email &&
+      details.password == programUser.password
+    ) {
+      console.log("Logged in");
+      setUser({
+        name: details.name,
+        email: details.email,
+      });
+    } else {
+      console.log("details do not match!");
+
+      setError("아이디와 비밀번호를 다시 확인하십시오.");
+    }
   };
+
   //로그아웃 정보 전달
   const Logout = () => {
     console.log("Logout");
+
+    setUser({ name: "", email: "" });
   };
 
   return (
@@ -31,7 +49,7 @@ function App() {
             <h2>
               welcome <span>{user.name}</span>
             </h2>
-            <button>Logout</button>
+            <button onClick={Logout}>Logout</button>
           </div>
         ) : (
           // 로그인 안됐을 경우
