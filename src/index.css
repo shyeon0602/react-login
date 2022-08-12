@@ -131,3 +131,8 @@ form .form-inner input[type="submit"] {
   font-weight: 600;
   cursor: pointer;
 }
+
+.p {
+  font-size: 13px;
+  color: red;
+}
