@@ -53,6 +53,8 @@ function LoginForm({ Login, error }) {
             value={details.password}
           />
         </div>
+        <div className="sub-find-detail">아이디/비밀번호 찾기</div>
+        <div className="sub-sign-in">회원가입</div>
         {/* 폼 전송: input type="submit" */}
         <input type="submit" value="LOGIN" />
       </div>
